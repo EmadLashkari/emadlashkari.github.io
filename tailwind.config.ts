@@ -1,5 +1,7 @@
 import type { Config } from "tailwindcss";
-
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
 const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,22 +10,35 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      animation: {
+        aurora: "aurora 60s linear infinite",
+      },
+      keyframes: {
+        aurora: {
+          from: {
+            backgroundPosition: "50% 50%, 50% 50%",
+          },
+          to: {
+            backgroundPosition: "350% 50%, 350% 50%",
+          },
+        },
+      },
       fontFamily: {
         josefin: ["var(--josefin)"],
         londrina: ["var(--landrina)"],
       },
     },
-    colors: {
-      white: "#FFFFFF",
-      orange: "#D99058",
-      rose: "#FE28A2",
-      blue: "#1C39BB",
-      pink: "#F77FBE",
-      green: "#2A9D8F",
-      red: "#CC3333",
-      darkSmoke: "#264653",
-    },
   },
-  plugins: [],
+  plugins: [addVariablesForColors],
 };
+function addVariablesForColors({ addBase, theme }: any) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val]),
+  );
+
+  addBase({
+    ":root": newVars,
+  });
+}
 export default config;
