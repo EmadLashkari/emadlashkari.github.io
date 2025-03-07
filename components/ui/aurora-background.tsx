@@ -14,11 +14,11 @@ export const AuroraBackground = ({
   ...props
 }: AuroraBackgroundProps) => {
   return (
-    <main>
+    <div className="snap-center">
       <div
         className={cn(
-          "relative flex flex-col  h-[100vh] items-center justify-center bg-zinc-50 dark:bg-zinc-900  text-slate-950 transition-bg",
-          className,
+          "relative flex flex-col  h-[100vh] items-center justify-center bg-[#F5EFFF] dark:bg-zinc-900  text-slate-950 transition-bg",
+          className
         )}
         {...props}
       >
@@ -43,12 +43,12 @@ export const AuroraBackground = ({
             absolute -inset-[10px] opacity-50 will-change-transform`,
 
               showRadialGradient &&
-                `[mask-image:radial-gradient(ellipse_at_100%_0%,black_10%,var(--transparent)_70%)]`,
+                `[mask-image:radial-gradient(ellipse_at_100%_0%,black_10%,var(--transparent)_70%)]`
             )}
           ></div>
         </div>
         {children}
       </div>
-    </main>
+    </div>
   );
 };

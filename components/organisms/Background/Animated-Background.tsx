@@ -2,13 +2,21 @@
 
 import { FlipWords } from "@/components/atoms/FlipWord";
 import { AuroraBackground } from "@/components/ui/aurora-background";
-import { motion } from "framer-motion";
-import React from "react";
+import useParallax from "@/lib/hooks/useParallax";
+import { motion, useScroll } from "framer-motion";
+import React, { useRef } from "react";
 
 export function AnimatedBackground() {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({ target: ref });
+  const y = useParallax(scrollYProgress, 300);
+
   return (
     <AuroraBackground>
-      <div className="w-full h-full flex flex-col justify-around items-center">
+      <div
+        ref={ref}
+        className="w-full h-full flex flex-col justify-around items-center pt-20 "
+      >
         <motion.div
           initial={{ opacity: 0.0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -19,7 +27,7 @@ export function AnimatedBackground() {
           }}
           className="relative flex flex-col gap-8 items-center justify-center px-4"
         >
-          <div className="text-3xl md:text-7xl font-bold text-white text-center">
+          <div className="text-3xl md:text-7xl font-bold dark:text-white text-center">
             Hi 👋 This Emad Lashkari
           </div>
           <div className="text-base font-light flex flex-col justify-center items-center gap-3 md:text-4xl dark:text-neutral-200 py-4">
