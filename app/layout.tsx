@@ -6,7 +6,7 @@ import {
   Josefin_Sans,
 } from "next/font/google";
 import "./globals.css";
-
+import "@/public/styles/fonts.css";
 const londrina = Londrina_Sketch({
   subsets: ["latin"],
   weight: ["400"],
