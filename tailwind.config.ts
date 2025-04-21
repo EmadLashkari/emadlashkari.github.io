@@ -26,6 +26,8 @@ const config: Config = {
       fontFamily: {
         josefin: ["var(--josefin)"],
         londrina: ["var(--landrina)"],
+        bolden: ["Bolden", "sans-serif"],
+        agelia: ["Agelia", "sans-serif"],
       },
     },
   },
@@ -34,7 +36,7 @@ const config: Config = {
 function addVariablesForColors({ addBase, theme }: any) {
   let allColors = flattenColorPalette(theme("colors"));
   let newVars = Object.fromEntries(
-    Object.entries(allColors).map(([key, val]) => [`--${key}`, val]),
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
 
   addBase({
