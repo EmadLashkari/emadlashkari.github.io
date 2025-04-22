@@ -6,7 +6,7 @@ import TheJourney from "@/components/pages/Landing/TheJourney";
 
 export default function Home() {
   return (
-    <main className="w-full h-full">
+    <main className="w-full h-full overflow-hidden">
       {/* <Navbar /> */}
       <ScrollWraper>
         <section className="w-full h-full first-page">
@@ -16,9 +16,8 @@ export default function Home() {
           <TheJourney />
         </section>
       </ScrollWraper>
-      <section className="w-full h-screen bg-[#07090c] flex justify-start items-center">
-        <Story />
-      </section>
+
+      <Story />
     </main>
   );
 }
