@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "Agelia";
-  src: url("/fonts/Agelia.otf") format("otf");
+  src: url("/fonts/Agelia.otf") format("opentype");
   font-style: normal;
   font-display: swap;
 }
