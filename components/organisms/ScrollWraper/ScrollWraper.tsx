@@ -32,11 +32,13 @@ function ScrollWraper({
       width: "100%",
       ease: "power2.out",
       duration: 1,
-    }).to(
+    }).fromTo(
       ".second-page-text",
       {
-        scaleY: 1,
-        y: 1,
+        y: 100,
+      },
+      {
+        y: 0,
         height: 10,
         duration: 0.3,
         ease: "elastic.out(1, 0.3)",
