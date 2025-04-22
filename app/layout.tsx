@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import {
   Inter,
   Londrina_Outline,
@@ -7,6 +8,7 @@ import {
 } from "next/font/google";
 import "./globals.css";
 import "@/public/styles/fonts.css";
+
 const londrina = Londrina_Sketch({
   subsets: ["latin"],
   weight: ["400"],
@@ -16,6 +18,16 @@ const josefin_sans = Josefin_Sans({
   subsets: ["latin"],
   weight: ["400", "100", "600"],
   variable: "--josefin",
+});
+const bolden = localFont({
+  src: "/fonts/bolden-regular-webfont.woff",
+  display: "swap",
+  variable: "--font-bolden",
+});
+const agelia = localFont({
+  src: "/fonts/Agelia.otf",
+  display: "swap",
+  variable: "--font-agelia",
 });
 
 export const metadata: Metadata = {
@@ -30,7 +42,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${londrina.className} ${josefin_sans.className}`}>
+      <body
+        className={`${londrina.className} ${josefin_sans.className} ${bolden.className} ${agelia.className}`}
+      >
         {children}
       </body>
     </html>

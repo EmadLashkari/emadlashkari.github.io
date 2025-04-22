@@ -26,8 +26,8 @@ const config: Config = {
       fontFamily: {
         josefin: ["var(--josefin)"],
         londrina: ["var(--landrina)"],
-        bolden: ["Bolden", "sans-serif"],
-        agelia: ["Agelia", "sans-serif"],
+        bolden: ["var(--font-bolden)"],
+        agelia: ["var(--font-agelia)"],
       },
     },
   },
