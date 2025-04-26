@@ -20,12 +20,12 @@ const josefin_sans = Josefin_Sans({
   variable: "--josefin",
 });
 const bolden = localFont({
-  src: "fonts/bolden-regular-webfont.woff",
+  src: "./fonts/bolden-regular-webfont.woff2",
   display: "swap",
   variable: "--font-bolden",
 });
 const agelia = localFont({
-  src: "fonts/Agelia.otf",
+  src: "./fonts/Agelia.otf",
   display: "swap",
   variable: "--font-agelia",
 });
