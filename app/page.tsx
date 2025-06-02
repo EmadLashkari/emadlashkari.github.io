@@ -1,23 +1,23 @@
-import { AnimatedBackground } from "@/components/organisms/Background/Animated-Background";
-import Navbar from "@/components/organisms/Navbar/navbar";
-import ScrollWraper from "@/components/organisms/ScrollWraper/ScrollWraper";
-import Story from "@/components/pages/Landing/Story";
-import TheJourney from "@/components/pages/Landing/TheJourney";
+import IntroText from "@/components/atoms/Intro";
+import Header from "@/components/organisms/Header/Header";
+import { LampContainerGsap } from "@/components/organisms/LightBulb/lamp-gsap";
+import Timeline from "@/components/organisms/Timeline/Timeline";
 
 export default function Home() {
   return (
-    <main className="w-full h-full overflow-hidden">
-      {/* <Navbar /> */}
-      <ScrollWraper>
-        <section className="w-full h-full first-page">
-          <AnimatedBackground />
-        </section>
-        <section className="half-circle relative bg-[#07090c] w-full h-screen translate-y-[100%] rounded-tr-[50%_10%] rounded-tl-[50%_10%] will-change-transform">
-          <TheJourney />
-        </section>
-      </ScrollWraper>
+    <main className="w-full h-full overflow-hidden relative">
+      <Header />
+      <LampContainerGsap>
+        <IntroText />
+      </LampContainerGsap>
 
-      <Story />
+      <Timeline />
     </main>
   );
+}
+
+{
+  /* <section className="half-circle relative bg-[#07090c] w-full h-screen translate-y-[100%] rounded-tr-[50%_10%] rounded-tl-[50%_10%] will-change-transform">
+          <TheJourney />
+        </section> */
 }

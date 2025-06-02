@@ -19,16 +19,6 @@ const josefin_sans = Josefin_Sans({
   weight: ["400", "100", "600"],
   variable: "--josefin",
 });
-const bolden = localFont({
-  src: "./fonts/bolden-regular-webfont.woff2",
-  display: "swap",
-  variable: "--font-bolden",
-});
-const agelia = localFont({
-  src: "./fonts/Agelia.otf",
-  display: "swap",
-  variable: "--font-agelia",
-});
 
 export const metadata: Metadata = {
   title: "Emad dev",
@@ -42,9 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${londrina.className} ${josefin_sans.className} ${bolden.className} ${agelia.className}`}
-      >
+      <body className={`${londrina.className} ${josefin_sans.className}`}>
         {children}
       </body>
     </html>
