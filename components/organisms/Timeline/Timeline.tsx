@@ -172,10 +172,10 @@ export default function Timeline() {
             style={{ opacity: "0" }}
             className="text-center  text-white absolute bottom-1/4 left-0 right-0"
           >
-            <h2 className="text-4xl font-bold mb-4">What's Next?</h2>
+            <h2 className="text-4xl font-bold mb-4">What`&apos;`s Next?</h2>
             <p className="text-lg max-w-2xl mx-auto">
               Excited to take on new challenges and build innovative projects.
-              Let's create something amazing together!
+              Let`&apos;`s create something amazing together!
             </p>
             <a
               href="#contact"
