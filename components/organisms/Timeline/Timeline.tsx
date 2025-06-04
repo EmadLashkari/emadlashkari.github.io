@@ -153,13 +153,17 @@ export default function Timeline() {
               >
                 <div
                   className={cn(
-                    "w-full md:w-5/12 p-4",
-                    event.side === "left" ? "text-right" : "text-left"
+                    "w-1/2 md:w-5/12 p-4 flex flex-col justify-start items-start",
+                    event.side === "left" ? "text-left" : "text-left"
                   )}
                 >
-                  <h3 className="text-2xl font-semibold">{event.year}</h3>
-                  <h4 className="text-xl font-medium">{event.title}</h4>
-                  <p className="text-gray-600">{event.description}</p>
+                  <h3 className="text-slate-100 w-1/2 text-2xl font-semibold">
+                    {event.year}
+                  </h3>
+                  <h4 className="text-slate-200 text-xl font-medium">
+                    {event.title}
+                  </h4>
+                  <p className="text-slate-400">{event.description}</p>
                 </div>
                 <div className="w-4 h-4 bg-blue-500 rounded-full absolute left-1/2 transform -translate-x-1/2" />
                 <div className="w-5/12 hidden md:block"></div>
@@ -172,13 +176,13 @@ export default function Timeline() {
             style={{ opacity: "0" }}
             className="text-center  text-white absolute bottom-1/4 left-0 right-0"
           >
-            <h2 className="text-4xl font-bold mb-4">What`&apos;`s Next?</h2>
+            <h2 className="text-4xl font-bold mb-4">What&apos;s Next?</h2>
             <p className="text-lg max-w-2xl mx-auto">
               Excited to take on new challenges and build innovative projects.
-              Let`&apos;`s create something amazing together!
+              Let&apos;s create something amazing together!
             </p>
             <a
-              href="#contact"
+              href="/contact"
               className="mt-6 inline-block bg-white text-blue-500 px-6 py-3 rounded-lg font-semibold"
             >
               Get in Touch

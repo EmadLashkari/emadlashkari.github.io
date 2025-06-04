@@ -13,23 +13,13 @@ gsap.registerPlugin(ScrollTrigger);
 const socialLinks = [
   {
     name: "GitHub",
-    url: "https://github.com/yourusername",
+    url: "https://github.com/EmadLashkari",
     icon: <Github />,
   },
   {
     name: "LinkedIn",
-    url: "https://linkedin.com/in/yourusername",
+    url: "https://www.linkedin.com/in/emad-lashkari-865081248/",
     icon: <Linkedin />,
-  },
-  {
-    name: "Twitter",
-    url: "https://x.com/yourusername",
-    icon: <X />,
-  },
-  {
-    name: "Instagram",
-    url: "https://instagram.com/yourusername",
-    icon: <Instagram />,
   },
 ];
 
@@ -100,7 +90,7 @@ export default function Contact() {
     const email = formData.get("email") as string;
     const message = formData.get("message") as string;
 
-    const mailtoLink = `mailto:your.email@example.com?subject=Contact%20Form%20Submission%20from%20${encodeURIComponent(
+    const mailtoLink = `mailto:emadlashkari.82@gmail.com?subject=Contact%20Form%20Submission%20from%20${encodeURIComponent(
       name
     )}&body=${encodeURIComponent(
       `From: ${name}\nEmail: ${email}\n\n${message}`
