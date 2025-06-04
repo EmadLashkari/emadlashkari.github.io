@@ -8,6 +8,7 @@ import {
 } from "next/font/google";
 import "./globals.css";
 import "@/public/styles/fonts.css";
+import Header from "@/components/organisms/Header/Header";
 
 const londrina = Londrina_Sketch({
   subsets: ["latin"],
@@ -21,8 +22,8 @@ const josefin_sans = Josefin_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Emad dev",
-  description: "Emad Lashkari is a developer",
+  title: "Emad Lashkari",
+  description: "Emad Lashkari Personal Website",
 };
 
 export default function RootLayout({
@@ -33,6 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${londrina.className} ${josefin_sans.className}`}>
+        <Header />
         {children}
       </body>
     </html>

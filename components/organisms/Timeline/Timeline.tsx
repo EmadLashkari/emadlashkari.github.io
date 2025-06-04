@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 import { cn } from "@/lib/utils/cn";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -181,12 +182,12 @@ export default function Timeline() {
               Excited to take on new challenges and build innovative projects.
               Let&apos;s create something amazing together!
             </p>
-            <a
+            <Link
               href="/contact"
               className="mt-6 inline-block bg-white text-blue-500 px-6 py-3 rounded-lg font-semibold"
             >
               Get in Touch
-            </a>
+            </Link>
           </div>
         </div>
       </div>
