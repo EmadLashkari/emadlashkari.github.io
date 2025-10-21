@@ -8,7 +8,6 @@ import {
 } from "next/font/google";
 import "./globals.css";
 import "@/public/styles/fonts.css";
-import Header from "@/components/organisms/Header/Header";
 
 const londrina = Londrina_Sketch({
   subsets: ["latin"],
@@ -34,7 +33,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${londrina.className} ${josefin_sans.className}`}>
-        <Header />
         {children}
       </body>
     </html>
