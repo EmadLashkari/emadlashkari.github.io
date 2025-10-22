@@ -84,7 +84,7 @@ export default function Header() {
   });
 
   return (
-    <nav ref={headerRef} className="fixed inset-0 z-50">
+    <nav ref={headerRef} className="fixed left-0 right-0 top-0 z-50">
       <CardNav
         logo={logo}
         logoAlt="Emad Lashkari"
