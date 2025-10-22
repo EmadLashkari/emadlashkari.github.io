@@ -4,7 +4,7 @@ import Link from "next/link";
 import React, { useRef } from "react";
 import { useMediaQuery } from "react-responsive";
 import CardNav from "./Mobile";
-import logo from "@/public/next.svg";
+import logo from "@/public/EmadWebsiteLogo.webp";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useGSAP } from "@gsap/react";

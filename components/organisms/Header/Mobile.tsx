@@ -5,7 +5,7 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { ArrowUpRight } from "lucide-react";
 import { useGSAP } from "@gsap/react";
 import Link from "next/link";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 gsap.registerPlugin(ScrollToPlugin);
 // use your own icon import if react-icons is not available
@@ -24,7 +24,7 @@ export type CardNavItem = {
 };
 
 export interface CardNavProps {
-  logo: string;
+  logo: StaticImageData;
   logoAlt?: string;
   items: CardNavItem[];
   className?: string;
@@ -209,7 +209,13 @@ const CardNav: React.FC<CardNavProps> = ({
           </div>
 
           <div className="logo-container flex items-center md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 order-1 md:order-none">
-            <Image src={logo} alt={logoAlt} className="logo h-[28px]" />
+            <Image
+              width={500}
+              height={500}
+              src={logo}
+              alt={logoAlt}
+              className="logo w-[100px] h-[100px]"
+            />
           </div>
 
           <Link
