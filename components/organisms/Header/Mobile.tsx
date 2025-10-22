@@ -5,6 +5,7 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { ArrowUpRight } from "lucide-react";
 import { useGSAP } from "@gsap/react";
 import Link from "next/link";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollToPlugin);
 // use your own icon import if react-icons is not available
@@ -110,17 +111,12 @@ const CardNav: React.FC<CardNavProps> = ({
     return tl;
   };
 
-  useLayoutEffect(() => {
+  useGSAP(() => {
     const tl = createTimeline();
     tlRef.current = tl;
+  });
 
-    return () => {
-      tl?.kill();
-      tlRef.current = null;
-    };
-  }, [ease, items]);
-
-  useLayoutEffect(() => {
+  useGSAP(() => {
     const handleResize = () => {
       if (!tlRef.current) return;
 
@@ -145,7 +141,7 @@ const CardNav: React.FC<CardNavProps> = ({
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, [isExpanded]);
+  });
 
   const toggleMenu = () => {
     const tl = tlRef.current;
@@ -213,7 +209,7 @@ const CardNav: React.FC<CardNavProps> = ({
           </div>
 
           <div className="logo-container flex items-center md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 order-1 md:order-none">
-            <img src={logo} alt={logoAlt} className="logo h-[28px]" />
+            <Image src={logo} alt={logoAlt} className="logo h-[28px]" />
           </div>
 
           <Link
