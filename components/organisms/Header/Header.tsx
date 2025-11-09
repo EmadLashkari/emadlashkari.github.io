@@ -50,6 +50,11 @@ const items = [
         href: "https://linkedin.com/in/emadlashkari",
         ariaLabel: "LinkedIn",
       },
+      {
+        label: "Telegram",
+        href: "https://t.me/Emad_Lashkari_82",
+        ariaLabel: "Telegram",
+      },
     ],
   },
 ];

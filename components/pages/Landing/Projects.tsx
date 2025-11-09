@@ -28,7 +28,7 @@ export default function Projects() {
       <h1 id="Projects" className="text-white pl-2 md:pl-10 text-4xl">
         My Projects
       </h1>
-      <div className="w-full flex flex-col lg:flex-row justify-center items-start p-3 md:px-5 md:py-5 gap-5 overflow-scroll">
+      <div className="w-full flex flex-col lg:flex-row justify-center items-start p-3 md:px-5 md:py-5 gap-5 overflow-hidden">
         {projects.map((item, index) => (
           <div
             key={item.title}
